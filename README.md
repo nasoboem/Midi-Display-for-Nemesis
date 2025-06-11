@@ -12,8 +12,10 @@ So the project has several layers to it.
 2. Programming the MIDI controller so that I could send MIDI data to the Nemesis.
 3. Figuring out an easy and consistent way to present the MIDI data on the display.
 
-First of credit where credit is due. The idea for the project came to me after I watched a video by the creator Floyd Steinberg – A DIY MIDI file player with Fluidsynth, Pirate Audio and Raspberry PI Zero 2. 
+First of credit where credit is due. The idea for the project came to me after I watched a video by the creator Floyd Steinberg – A DIY MIDI file player with Fluidsynth, Pirate Audio and Raspberry PI Zero 2.
+
 [![A DIY MIDI file player with Fluidsynth, Pirate Audio and Raspberry PI Zero 2](https://img.youtube.com/vi/ilmhX1j-ENU/0.jpg)](https://www.youtube.com/watch?v=ilmhX1j-ENU) 
+
 He also does a phenomenal job of documenting his projects so it was easy to follow along and adapt his project to suit my needs.
 
 Thanks to Floyd I had an easy start. The Pirate Audio header and a Raspberry Pi Zero he was using I had lying around from previous projects (I had actually two headers from Pirate Audio – unfortunately I killed both their display in the process. Note to self: Don’t mix strong magnets, like say from speakers, with OLED displays). In the end I was ordering a different display from BerryBase – https://www.berrybase.de for the finale version.
