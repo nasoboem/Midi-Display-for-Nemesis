@@ -4,7 +4,7 @@ I had a programmable MIDI controller putting on dust. I have three GRIDs (EN16, 
 I met them at [Super Booth 2025](https://www.superbooth.com/) in Berlin  and had a look at their new lineup (generation 3) which now has modules with a display. Mine however does not have a display and neither has the [Nemesis](https://www.sourceaudio.net/nemesis-delay.html) from [Source Audio](https://www.sourceaudio.net/).
 Therefore when I would program the MIDI controller I wouldn't know what I was doing on the Nemesis pedal. So I had the idea to build a display, a MIDI listener that would show me what kind of MIDI data I would send to my guitar pedal.
 I hope that anybody can follow along and build their MIDI setup to unlock your guitar pedal true potential.
-The Source Audio Nemesis is a very good candidate to get such an upgrade, because one can hardly access 1/3 of its features from the front panel. The rest is only accessible via the Neuron App or via MIDI. The MIDI capabilities of the Nemesis are virtually complete and the documentation excellent. - https://www.sourceaudio.net/uploads/1/1/5/1/115104065/nemesis_midi_implementation_1_01.pdf A very good starting point for the project.
+The Source Audio Nemesis is a very good candidate to get such an upgrade, because one can hardly access 1/3 of its features from the front panel. The rest is only accessible via the Neuron App or via MIDI. The MIDI capabilities of the Nemesis are virtually complete and the [documentation](https://www.sourceaudio.net/uploads/1/1/5/1/115104065/nemesis_midi_implementation_1_01.pdf) excellent. A very good starting point for the project.
 
 So the project has several layers to it.
 
@@ -12,7 +12,9 @@ So the project has several layers to it.
 2. Programming the MIDI controller so that I could send MIDI data to the Nemesis.
 3. Figuring out an easy and consistent way to present the MIDI data on the display.
 
-First of credit where credit is due. The idea for the project came to me after I watched a video by the creator Floyd Steinberg – A DIY MIDI file player with Fluidsynth, Pirate Audio and Raspberry PI Zero 2 (https://www.youtube.com/watch?v=ilmhX1j-ENU). He also does a phenomenal job of documenting his projects so it was easy to follow along and adapt his project to suit my needs.
+First of credit where credit is due. The idea for the project came to me after I watched a video by the creator Floyd Steinberg – A DIY MIDI file player with Fluidsynth, Pirate Audio and Raspberry PI Zero 2. 
+[![A DIY MIDI file player with Fluidsynth, Pirate Audio and Raspberry PI Zero 2](https://img.youtube.com/vi/ilmhX1j-ENU/0.jpg)](https://www.youtube.com/watch?v=ilmhX1j-ENU) 
+He also does a phenomenal job of documenting his projects so it was easy to follow along and adapt his project to suit my needs.
 
 Thanks to Floyd I had an easy start. The Pirate Audio header and a Raspberry Pi Zero he was using I had lying around from previous projects (I had actually two headers from Pirate Audio – unfortunately I killed both their display in the process. Note to self: Don’t mix strong magnets, like say from speakers, with OLED displays). In the end I was ordering a different display from BerryBase – https://www.berrybase.de for the finale version.
 
