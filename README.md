@@ -18,21 +18,21 @@ First of credit where credit is due. The idea for the project came to me after I
 
 He also does a phenomenal job of documenting his projects so it was easy to follow along and adapt his project to suit my needs.
 
-Thanks to Floyd I had an easy start. The Pirate Audio header and a Raspberry Pi Zero he was using I had lying around from previous projects (I had actually two headers from Pirate Audio – unfortunately I killed both their display in the process. Note to self: Don’t mix strong magnets, like say from speakers, with OLED displays). In the end I was ordering a different display from BerryBase – https://www.berrybase.de for the finale version.
+Thanks to Floyd I had an easy start. The Pirate Audio header and a Raspberry Pi Zero he was using I had lying around from previous projects (I had actually two headers from Pirate Audio – unfortunately I killed both their display in the process. Note to self: Don’t mix strong magnets, like say from speakers, with OLED displays). In the end I was ordering a different display from [BerryBase](https://www.berrybase.de) for the finale version.
 
 So the hardware for the project is:
 
-    • Raspberry Pi Zero 2 WH - https://www.berrybase.de/raspberry-pi-zero-2-wh
-    • 1.44" LCD Display HAT for Raspberry Pi - https://www.berrybase.de/1.44-lcd-display-hat-fuer-raspberry-pi (careful – there is a very similarly looking 1.3" OLED display from Waveshare that doesn’t work with my code – it took me several days to find the mistake. I was using the wrong files for the setup and was wondering why it wasn’t working.) You find the right setup files here: https://www.waveshare.com/wiki/1.44inch_LCD_HAT
+    • [Raspberry Pi Zero 2 WH](https://www.berrybase.de/raspberry-pi-zero-2-wh)
+    • [1.44" LCD Display HAT for Raspberry Pi](https://www.berrybase.de/1.44-lcd-display-hat-fuer-raspberry-pi) (careful – there is a very similarly looking 1.3" OLED display from Waveshare that doesn’t work with my code – it took me several days to find the mistake. I was using the wrong files for the setup and was wondering why it wasn’t working.) You find the right setup files [here](https://www.waveshare.com/wiki/1.44inch_LCD_HAT).
     • Micro SD-Card for the Raspberry Pi OS
     • USB adapter (micro-USB-B to USB-A female)
     • Power cable for the Raspberry Pi
     • JustIn MIDI USB Interface MP-02 1x MIDI IN 1x MIDI OUT (any other should work too) 
-    • Programmable MIDI controller (in my case EN16 - https://intech.studio/de/shop/en16?variant=en16-detent , BU16 - https://intech.studio/de/shop/bu16?variant=bu16-tactile and EF44 - https://intech.studio/de/shop/ef44?variant=ef44-detent from Intech Studio - https://intech.studio/)
+    • Programmable MIDI controller (in my case [EN16](https://intech.studio/de/shop/en16?variant=en16-detent) , [BU16](https://intech.studio/de/shop/bu16?variant=bu16-tactile) and [EF44](https://intech.studio/de/shop/ef44?variant=ef44-detent) from [Intech Studio](https://intech.studio/))
       You would need also a MIDI USB host, that could share MIDI data send from the MIDI controller in my case via USB with the Nemesis delay pedal and the Raspberry Pi. I use the
-    • RK006 - https://retrokits.com/shop/rk006/ from RetroKits - https://retrokits.com/ for my main MIDI hub in my setup.
-    • MIDI cable TRS-A to DIN5 femal - https://retrokits.com/shop/trsa-din5-dongle/
-    • MIDI cable TRS-A to DIN5 male - https://retrokits.com/shop/trsa-din5-male-15/
+    • [RK006](https://retrokits.com/shop/rk006/) from [RetroKits](https://retrokits.com/) for my main MIDI hub in my setup.
+    • [MIDI cable TRS-A to DIN5 femal](https://retrokits.com/shop/trsa-din5-dongle/)
+    • [MIDI cable TRS-A to DIN5 male](https://retrokits.com/shop/trsa-din5-male-15/)
 
 Man, written out it’s insane how much stuff I had laying around at home. I just bought the display, because I killed the ones I had. All the rest I already owned, because it’s part of my synth setup or from previous projects. Now that you spend 500 bucks, like me, we can begin.
 
