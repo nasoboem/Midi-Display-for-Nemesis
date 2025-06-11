@@ -22,25 +22,25 @@ Thanks to Floyd I had an easy start. The Pirate Audio header and a Raspberry Pi 
 
 So the hardware for the project is:
 
-[Raspberry Pi Zero 2 WH](https://www.berrybase.de/raspberry-pi-zero-2-wh)
-[1.44" LCD Display HAT for Raspberry Pi](https://www.berrybase.de/1.44-lcd-display-hat-fuer-raspberry-pi) (careful – there is a very similarly looking 1.3" OLED display from Waveshare that doesn’t work with my code – it took me several days to find the mistake. I was using the wrong files for the setup and was wondering why it wasn’t working.) You find the right setup files [here](https://www.waveshare.com/wiki/1.44inch_LCD_HAT).
-Micro SD-Card for the Raspberry Pi OS
-USB adapter (micro-USB-B to USB-A female)
-Power cable for the Raspberry Pi
-JustIn MIDI USB Interface MP-02 1x MIDI IN 1x MIDI OUT (any other should work too) 
-Programmable MIDI controller (in my case [EN16](https://intech.studio/de/shop/en16?variant=en16-detent) , [BU16](https://intech.studio/de/shop/bu16?variant=bu16-tactile) and [EF44](https://intech.studio/de/shop/ef44?variant=ef44-detent) from [Intech Studio](https://intech.studio/))
+- [Raspberry Pi Zero 2 WH](https://www.berrybase.de/raspberry-pi-zero-2-wh)
+- [1.44" LCD Display HAT for Raspberry Pi](https://www.berrybase.de/1.44-lcd-display-hat-fuer-raspberry-pi) (careful – there is a very similarly looking 1.3" OLED display from Waveshare that doesn’t work with my code – it took me several days to find the mistake. I was using the wrong files for the setup and was wondering why it wasn’t working.) You find the right setup files [here](https://www.waveshare.com/wiki/1.44inch_LCD_HAT).
+- Micro SD-Card for the Raspberry Pi OS- 
+- USB adapter (micro-USB-B to USB-A female)
+- Power cable for the Raspberry Pi
+- JustIn MIDI USB Interface MP-02 1x MIDI IN 1x MIDI OUT (any other should work too) 
+- Programmable MIDI controller (in my case [EN16](https://intech.studio/de/shop/en16?variant=en16-detent) , [BU16](https://intech.studio/de/shop/bu16?variant=bu16-tactile) and [EF44](https://intech.studio/de/shop/ef44?variant=ef44-detent) from [Intech Studio](https://intech.studio/))
 You would need also a MIDI USB host, that could share MIDI data send from the MIDI controller in my case via USB with the Nemesis delay pedal and the Raspberry Pi. I use the
-[RK006](https://retrokits.com/shop/rk006/) from [RetroKits](https://retrokits.com/) for my main MIDI hub in my setup.
-[MIDI cable TRS-A to DIN5 femal](https://retrokits.com/shop/trsa-din5-dongle/)
-[MIDI cable TRS-A to DIN5 male](https://retrokits.com/shop/trsa-din5-male-15/)
+- [RK006](https://retrokits.com/shop/rk006/) from [RetroKits](https://retrokits.com/) for my main MIDI hub in my setup.
+- [MIDI cable TRS-A to DIN5 femal](https://retrokits.com/shop/trsa-din5-dongle/)
+- [MIDI cable TRS-A to DIN5 male](https://retrokits.com/shop/trsa-din5-male-15/)
 
 Man, written out it’s insane how much stuff I had laying around at home. I just bought the display, because I killed the ones I had. All the rest I already owned, because it’s part of my synth setup or from previous projects. Now that you spend 500 bucks, like me, we can begin.
 
-##1. Setup the Raspberry Pi
+## 1. Setup the Raspberry Pi
 
 In the beginning I was following Floyds recommendation but later I switched to the full 64 bit version. Not going with the headless version of the OS makes it more bloated, but saved me because I could fix an error in my CSV file that is coming up later.
 
-###Writing the OS onto the SD card
+### Writing the OS onto the SD card
 
 So on top of all the gear mentioned above you now need a computer with a micro SD card reader and an internet connection via WiFi. Sorry.
 
@@ -56,9 +56,9 @@ Assemble the Pi and the LCD screen by putting it on the GPIO pins.
 
 When its done put the SD card into the Pi and power it on. Give it some time to properly install the OS and then you should be able to ssh into the Pi via a terminal on your computer.
 
-###Installing the Pi / Python
+### Installing the Pi / Python
 
-####Terminal: 
+#### Terminal: 
 	ssh pi@raspberrypi (or whatever user you set it to instead of pi)
 	enter your chosen password and acknowledge the connection
 	sudo apt update
@@ -66,13 +66,13 @@ When its done put the SD card into the Pi and power it on. Give it some time to 
 	sudo raspi-config - turn on spi, i2c (for the display) and vnc (for interacting with the desktop of the Pi via a VNC viewer)
 	sudo apt-get install python3-rpi.gpio python3-spidev python3-pip python3-pil python3-numpy python3-rtmidi
 
-###Installing the display
+### Installing the display
 
 After all the installations ran trough now comes the installation of the display. Follow their instructions [here](https://www.waveshare.com/wiki/1.44inch_LCD_HAT). 
 
 As of the current description bookworm does not need any other installation except for the lgpio (may also already work, because we installed it for python with python3-rpi.gpio)
 
-####lgpio
+#### lgpio
 	sudo su
 	wget https://github.com/joan2937/lg/archive/master.zip
 	unzip master.zip
@@ -85,7 +85,7 @@ So its only the installation of the display left.
 
 (In Bookworm, when I recall it correctly, it wasn’t necessary to install 7z, so you can omit the first command.)
 
-####Download Examples
+#### Download Examples
 	sudo apt-get install p7zip-full -y
 	wget https://files.waveshare.com/upload/f/fa/1.44inch-LCD-HAT-Code.7z
 	7z x 1.44inch-LCD-HAT-Code.7z
@@ -99,4 +99,4 @@ So its only the installation of the display left.
 If you were able to see the test programs on the display you are good to go.
 Now your Raspberry Pi should be able to receive and send MIDI data and show what ever you want on its display.
 
-##2. Programming the the MIDI controller
+## 2. Programming the the MIDI controller
