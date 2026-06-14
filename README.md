@@ -2,9 +2,9 @@
 
 I had a programmable MIDI controller putting on dust. I have three GRIDs (EN16, BU16 and EF44 first generation) from [Intech Studios](https://intech.studio/).
 I met them at [Super Booth 2025](https://www.superbooth.com/) in Berlin  and had a look at their new lineup (generation 3) which now has modules with a display. Mine however does not have a display and neither has the [Nemesis](https://www.sourceaudio.net/nemesis-delay.html) from [Source Audio](https://www.sourceaudio.net/).
-Therefore when I would program the MIDI controller I wouldn't know what I was doing on the Nemesis pedal. So I had the idea to build a display, a MIDI listener that would show me what kind of MIDI data I would send to my guitar pedal.
+Therefore when I would program the MIDI controller I wouldn't know what I was doing on the Nemesis pedal. So I had the idea to build a display, a MIDI listener, that would show me what kind of MIDI data I would send to my guitar pedal.
 I hope that anybody can follow along and build their MIDI setup to unlock your guitar pedal true potential.
-The Source Audio Nemesis is a very good candidate to get such an upgrade, because one can hardly access 1/3 of its features from the front panel. The rest is only accessible via the Neuron App or via MIDI. The MIDI capabilities of the Nemesis are virtually complete and the [documentation](https://www.sourceaudio.net/uploads/1/1/5/1/115104065/nemesis_midi_implementation_1_01.pdf) excellent. A very good starting point for the project.
+The Source Audio Nemesis is a very good candidate to get such an upgrade, because one can hardly access 1/3 of its features from the front panel. The rest is only accessible via the Neuron App or via MIDI. The MIDI capabilities of the Nemesis are virtually complete and the [documentation](https://cdn.shopify.com/s/files/1/0938/1593/0953/files/nemesis_midi_implementation.pdf?v=1752577217) excellent. A very good starting point for the project.
 
 So the project has several layers to it.
 
@@ -100,3 +100,22 @@ If you were able to see the test programs on the display you are good to go.
 Now your Raspberry Pi should be able to receive and send MIDI data and show what ever you want on its display.
 
 ## 2. Programming the the MIDI controller
+
+I think since I have started the project I have reprogrammed my MIDI controller three times. It was part convenience, usability of the GRID modules and part changes in the firmware of the modules. After an update my programming wasn’t working any more. First I leaned heavily on pages but that is not very convenient, because you don’t necessary know which page you are on (even when you color code them).
+So when I reprogrammed the modules the third time I followed the recommendation of the Intech Studios guys to iterate through different values by multi button pushes instead of having one knob per function. The display would spare me to memories everything, it will tell me what I’m doing.
+
+To program the GRID modules you have to download Intech Studios Grid Editor [here](https://intech.studio/us/software-downloads). I have tested the Grid Editor on Linux and Windows and unfortunately with my first generation modules I hade issues to connect with them in Linux (Ubuntu LTS 22.04). However, I hade no issues with them by using Windows. At least none that a firmware update couldn’t fix.
+
+The documentation for the modules is in my opinion to sparse and some of the linked wiki pages contain old (non-functioning) code which is annoying. Sorry, but I am to old for discord servers and when I work on the project I want an answer now and not maybe some day.
+The [support page](https://intech.studio/us/support) gives you several option to contact them. Good luck!!
+
+The overall idea for the project is to send the MIDI data that controls the Source Audio Nemesis from the MIDI controller to the Nemesis and send independent of that the same MIDI data to a display (MIDI listener) that would show what is being send. For that to work one need to know what MIDI data is controlling what parameter on the Nemesis.
+
+The documentation of all the MIDI control data you can find [here](https://cdn.shopify.com/s/files/1/0938/1593/0953/files/nemesis_midi_implementation.pdf?v=1752577217). (Source Audio changed the Link – Ahhh, that is annoying!)
+
+So now you have 9 Pages of CC values to choose from.
+
+Before you program your MIDI controller you should decide which one you want and how to lay them out.
+
+Here is how I have done it:
+
