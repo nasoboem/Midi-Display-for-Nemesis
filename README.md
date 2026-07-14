@@ -115,11 +115,11 @@ The documentation of all the MIDI control data you can find [here](https://cdn.s
 
 So now you have 9 Pages of CC values to choose from.
 
-Before you program your MIDI controller you should decide which one you want and how to lay them out.
+Before you program your MIDI controller you should decide which features you want and how to lay them out.
 
 Here is how I have done it:
 <img width="1198" height="1663" alt="GRID-Belegung" src="https://github.com/user-attachments/assets/f7a33e61-280c-4d2d-bc62-782d5b66ee5e" />
 
-The encoders have two modes of operation pushing and turning. I usually used the push button function to switch between several parameters of the same feature and use the turning of the encoder to set the value of the parameter. The first 100 presets ar the factory presets, then there are some downloaded ones and some I made my self and yes I apparently have one preset twice. The only annoying issue that I have with the preset selection is, that only the whole module has a variable that I could set, so I use a counter from 0-7 to switch between the presets on one button. So if you switch buttons and you have been on preset 4 on that button you will get preset 5 on the next button and not the first preset of that button. I could probably change that behavior but I almost maxed out the amount of code for each button and so I didn't bother. 
+The encoders have two modes of operation pushing and turning. I usually used the push button function to switch between several parameters of the same feature and use the turning of the encoder to set the value of the parameter. The first 100 presets are the factory presets, then there are some downloaded ones and some I made my self and yes I apparently have one preset twice. The only annoying issue that I have with the preset selection is, that only the whole module has a variable that I could set, so I use a counter from 0-7 to switch between the presets on one button. So if you switch buttons and you have been on preset 4 on that button you will get preset 5 on the next button and not the first preset of that button. I could probably change that behavior but I almost maxed out the amount of code for each button and so I didn't bother. 
 
 I also didn't bother with features I could easily reach on the Nemesis itself.  
